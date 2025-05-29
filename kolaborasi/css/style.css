@@ -1,0 +1,693 @@
+  /* Animasi gradasi background */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Background utama: coklat klasik dengan tekstur kertas tua */
+  body.bg-history {
+    background-color: #f3e5ab; /* Warna dasar kertas tua */
+    background-image: 
+      url('https://www.transparenttextures.com/patterns/paper-fibers.png'), /* tekstur kertas */
+      linear-gradient(135deg, #f3e9dd, #c19a6b, #5e3717); /* gradasi coklat */
+    background-blend-mode: overlay;
+    background-size: 300px 300px, 400% 400%;
+    background-repeat: repeat, no-repeat;
+    animation: gradientAnimation 20s ease infinite;
+    
+    color: #3e2723; /* coklat gelap untuk teks */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  body.bg-history2 {
+    background-color: #BF9264; /* Warna dasar kertas tua */
+    background-image: 
+      url('https://www.transparenttextures.com/patterns/paper-fibers.png'), /* tekstur kertas */
+      linear-gradient(135deg, #f3e9dd, #97866A, #854918); /* gradasi coklat */
+    background-blend-mode: overlay;
+    background-size: 300px 300px, 400% 400%;
+    background-repeat: repeat, no-repeat;
+    animation: gradientAnimation 20s ease infinite;
+    
+    color: #3e2723; /* coklat gelap untuk teks */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  /* Efek Debu */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('https://i.ibb.co/vqgQLMn/dust-overlay.gif'); /* debu halus transparan */
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Animasi Pelajari Selanjutnya Menjadi Gerak-Gerak*/
+  @keyframes moveArrow {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+
+  .animate-moveArrow {
+    animation: moveArrow 1s infinite;
+  }
+
+  /* Animasi Kembali Menjadi Gerak-Gerak*/
+  @keyframes bounceY {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .animate-bounceY {
+    animation: bounceY 1s infinite;
+  }
+
+  /* Ubah Font */
+  .font-news {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+  }
+
+  .font-lucida {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+  }
+
+  /* Tombol coklat */
+  .btn-coklat {
+    background-color: #6B4C3B;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Georgia', serif;
+  }
+
+  .btn-coklat:hover {
+    background-color: #5a3e30;
+  }
+
+  /* Utility warna coklat */
+  .text-coklat {
+    color: #6B4C3B;
+  }
+
+  .text-coklat-muda {
+    color: #D9CBB6;
+  }
+
+  .text-coklat-terang {
+    color: #F3E9DD;
+  }
+
+  /* Background dropdown coklat */
+  .bg-coklat {
+    background-color: #6b4c3b; /* coklat tua */
+  }
+
+  /* Teks dropdown default: coklat sangat terang (nyala) */
+  .text-coklat-dropdown {
+    color: #f0e6dc; /* coklat terang */
+  }
+
+  /* Warna Coklat Kustom */
+  .bg-coklat2 {
+    background-color: #A0522D; /* Sienna atau coklat sedang */
+  }
+
+  .bg-coklat-muda {
+    background-color: #DEB887; /* BurlyWood */
+  }
+
+  .bg-coklat-terang {
+    background-color: #FFE4C4; /* Bisque */
+  }
+
+  /* Gradient Coklat Terang */
+  .bg-gradient-coklat-terang {
+    background-image: linear-gradient(to bottom right, #F5DEB3, #FFE4B5, #FFDAB9);
+  }
+
+  /* Navigasi 2 */
+  .nav-link2.active-underline2 {
+    position: relative;
+  }
+  
+  .nav-link2.active-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link2 { 
+    position: relative;
+    font-weight: 600;
+    color: #f5deb3; /* coklat muda */
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .nav-link2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffe4b5; /* underline coklat terang */
+    transition: width 0.3s ease;
+  }
+
+  .nav-link2 {
+    position: relative;
+    padding-bottom: 4px; /* jarak bawah teks dan garis */
+    text-decoration: none;
+  }
+  
+  .nav-link2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link2:hover::after,
+  .nav-link2.active-underline::after {
+    width: 100%;
+  }
+  
+  .nav-link2:active {
+    transform: scale(1.1);
+    color: #fff7dc;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .hover\:bg-coklat-terang:hover {
+    background-color: #f0e6dc !important;  
+    color: #6b4c3b !important;             
+  }
+
+  /* Styling khusus gambar tambahan */
+  .gambar-tentang {
+    width: 200px; /* Atur ukuran gambar */
+    height: 200px; /* Sama supaya bulat */
+    object-fit: cover; /* Supaya foto tidak gepeng */
+    border-radius: 50%; /* Membuat gambar bulat */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow tipis hitam */
+    display: block; /* Biar bisa ditengah pakai margin auto */
+    margin: 0 auto;
+  }
+
+  .teks-bawah-gambar {
+    margin-top: 0.5rem;
+    font-size: 2rem; /* Lebih besar untuk h1 */
+    color: #493628; 
+    font-weight: 700; /* Tebal */
+  }
+
+  .teks-bawah-gambar2 {
+    margin-top: 0.5rem;
+    font-size: 1.8rem; /* Lebih besar untuk h2 */
+    color: #654520; /* Tailwind gray-700 */
+    font-weight: 700; /* Tebal */
+  }
+
+  /* Navigasi 3 */
+  .nav-link3.active-underline {
+    position: relative;
+  }
+
+  .nav-link3.active-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link3 { 
+    position: relative;
+    font-weight: 600;
+    color: #f5deb3; /* coklat muda */
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .nav-link3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffe4b5; /* underline coklat terang */
+    transition: width 0.3s ease;
+  }
+
+  .nav-link3 {
+    position: relative;
+    padding-bottom: 4px; /* jarak bawah teks dan garis */
+    text-decoration: none;
+  }
+  
+  .nav-link3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #EF9C66;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link3:hover::after,
+  .nav-link3.active-underline::after {
+    width: 100%;
+  }
+
+  .nav-link3:active {
+    transform: scale(1.1);
+    color: #887125;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .hover3\:bg-coklat-terang:hover {
+    background-color: #f0e6dc !important;  
+    color: #FFA55D !important;             
+  }
+
+  body.bg-gradient-ekonomi {
+    background: linear-gradient(to bottom right, #d2b48c, #a0522d, #8b5a2b); /* Gradasi coklat hangat */
+  }
+    
+  .bg-ekonomi-dark {
+    background-color: #8b5a2b; /* Coklat gelap (saddle brown) */
+  }
+    
+  .text-ekonomi-dark {
+    color: #8b5a2b;
+  }
+    
+  .bg-ekonomi-light {
+    background-color: #cd853f; /* Perunggu/medium tan */
+  }
+    
+  .bg-ekonomi-bright {
+    background-color: #f4e1d2; /* Coklat muda */
+  }
+    
+  .text-ekonomi {
+    color: #f4e1d2;
+  }
+    
+  /* Dropdown bg dan teks */
+  .bg-coklat {
+    background-color: #6b4c3b;
+  }
+    
+  .bg-coklat-muda {
+    background-color: #deb887;
+  }
+
+  body.bg-gradient-kemunduran {
+    background: linear-gradient(to bottom right, #0d1b2a, #1b263b, #415a77); /* Biru gelap */
+  }
+    
+  .bg-biru-gelap {
+    background-color: #0d1b2a; /* Biru gelap utama */
+  }
+    
+  .text-biru-gelap {
+    color: #0d1b2a;
+  }
+  
+  /* Navigasi 4*/
+  .nav-link4.active-underline {
+    position: relative;
+  }
+
+  .nav-link4.active-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #89A8B2;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link4 {
+    position: relative;
+    font-weight: 600;
+    color: #BED7DC; /* biru muda */
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .nav-link4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8EACCD; /* underline coklat terang */
+    transition: width 0.3s ease;
+  }
+
+  .nav-link4 {
+    position: relative;
+    padding-bottom: 4px; /* jarak bawah teks dan garis */
+    text-decoration: none;
+  }
+
+  .nav-link4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #92C7CF;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link4:hover::after,
+  .nav-link4.active-underline::after {
+    width: 100%;
+  }
+
+  .nav-link4:active {
+    transform: scale(1.1);
+    color: #9FB3DF;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .hover4\:bg-biru-terang:hover {
+    background-color: #B3C8CF !important;  
+    color: #295F98 !important;             
+  }
+    
+  .bg-biru-muda {
+    background-color: #1e3a5f; /* Biru sedang */
+  }
+    
+  .bg-biru-terang {
+    background-color: #81d4fa; /* Biru terang */
+  }
+    
+  .text-biru {
+    color: #0E2954;
+  }
+    
+    
+  footer {
+    background-color: #1e3a5f; /* biru sedang, beda dari navbar */
+    color: #f5deb3; /* coklat muda untuk teks footer */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 5rem;
+    width: 100%;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+    
+  .bg-biru-muda1 {
+    background-color: #B3C8CF;
+  }
+
+  .kecil-gambar-container {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    margin-top: 2rem; /* sesuai mt-8 */
+  }
+    
+  .kecil-gambar {
+    max-width: 400px;  
+    width: 200%;       
+    height: auto;      
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+    
+  .kecil-gambar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+  }
+    
+  body.bg-gradient-politik {
+    background: linear-gradient(to bottom right, #7b5e57, #a67b5b, #c19a6b); /* Coklat keemasan */
+  }
+    
+  .bg-politik-dark {
+    background-color: #7b5e57; /* Coklat tua */
+  }
+    
+  .text-politik-dark {
+    color: #7b5e57;
+  }
+    
+  .bg-politik-light {
+    background-color: #bfa382; /* Coklat muda */
+  }
+    
+  .bg-politik-bright {
+    background-color: #ffe4b5; /* Krem keemasan */
+  }
+    
+  .text-politik {
+    color: #ffe4b5;
+  }
+
+  /* Animasi Gambar*/
+  .image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 400px; /* Tambah batas maksimum lebar */
+    width: 100%; /* Agar responsif di layar kecil */
+  }
+    
+  .image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+    
+  .image-container img {
+    display: block;
+    width: 100%; /* Menyesuaikan ukuran container */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+    
+  .image-container:active img {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  /* Info Tambahan */
+  .info-tambahan1 {
+    background-color: #fff8f0;
+    border: 2px solid #d4a373;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 2rem auto;
+    font-family: Georgia, serif;
+    color: #5d4037;
+    box-shadow: 6px 6px 0 #d4a373;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer; /* kasih pointer supaya terlihat klikable */
+    font-size: 20px;
+  }
+
+  .info-tambahan1:hover {
+    box-shadow: 8px 8px 12px rgba(212, 163, 115, 0.6);
+    transform: translate(0, -2px); /* sedikit naik pas hover */
+  }
+
+  .info-tambahan1:active {
+    box-shadow: 2px 2px 8px #a67c52;
+    transform: translate(2px, 2px); /* geser pas dipencet */
+  }
+
+  body.bg-gradient-sosial {
+      background: linear-gradient(to bottom right, #4e7b58, #6ba56b, #c0de90); /* Hijau keemasan */
+    }
+    
+  .bg-sosial-dark {
+    background-color: #4e7b58; /* Hijau tua */
+  }
+    
+  .text-sosial-dark {
+    color: #4e7b58;
+  }
+
+  /* Navigasi 6*/
+  .nav-link6.active-underline {
+    position: relative;
+  }
+
+  .nav-link6.active-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #618264;
+  }
+
+  .nav-link6 {
+    position: relative;
+    font-weight: 600;
+    color: #DDFFBB; /* hijaw */
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .nav-link6::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #658147; /* underline hijau gelap */
+    transition: width 0.3s ease;
+  }
+
+  .nav-link6 {
+    position: relative;
+    padding-bottom: 4px; /* jarak bawah teks dan garis */
+    text-decoration: none;
+  }
+
+  .nav-link6::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #3B5249;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link6:hover::after,
+  .nav-link6.active-underline::after {
+    width: 100%;
+  }
+
+  .nav-link6:active {
+    transform: scale(1.1);
+    color: #748E63;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .hover6\:bg-hijau-terang:hover {
+    background-color: #88AB8E !important;  
+    color: #597445 !important;             
+  }
+    
+  .bg-sosial-light {
+    background-color: #8ecf8e; /* Hijau muda */
+  }
+    
+  .bg-sosial-bright {
+    background-color: #dff5d6; /* Hijau keemasan cerah */
+  }
+    
+  .text-sosial {
+    color: #dff5d6;
+  }
+    
+  .bg-hijau {
+    background-color: #618264;
+  }
+
+  /* Info Tambahan */
+  .info-tambahan {
+    background-color: #fff8f0;
+    border: 2px solid #618264;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 2rem auto;
+    font-family: 'Times New Roman', Times, serif;
+    color: #375d3c;
+    box-shadow: 6px 6px 0 #88AB8E;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer; /* kasih pointer supaya terlihat klikable */
+    font-size: 24px; 
+  }
+
+  .info-tambahan:hover {
+    box-shadow: 8px 8px 12px #A0C49D;
+    transform: translate(0, -2px); /* sedikit naik pas hover */
+  }
+
+  .info-tambahan:active {
+    box-shadow: 2px 2px 8px #26cc71;
+    transform: translate(2px, 2px); /* geser pas dipencet */
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* responsif */
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .footer-left, .footer-right {
+    flex: 1 1 auto;
+    margin: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
